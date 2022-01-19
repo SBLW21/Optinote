@@ -13,6 +13,9 @@ module Optinote
       generate.helper false
       generate.test_framework :test_unit, fixture: false
     end
+    config.assets.configure do |env|
+      env.export_concurrent = false
+    end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
 
